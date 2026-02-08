@@ -8,17 +8,22 @@ ROG Flow Z13 (2022) GZ301ZE
   (24M Cache, up to 5.4 GHz, 14 cores: 6 P and 8 E) Alder Lake TDP 45W
   - Socket 1744 FCBGA - 10nm - Threads 20
 
-- GPU: NVIDIA® GeForce RTX™ 3050 Ti Laptop GPU GDDR6 ROG Boost: 1085MHz*
-  at 40W (1035MHz Boost Clock+50MHz OC, 35W+5W Dynamic Boost) 4GB GDDR6
-  128 bits + Intel(R) Iris(R) Xe Graphics Alder Lake GT2
+- GPU: NVIDIA® GeForce RTX™ 3050 Ti Laptop GPU GDDR6
+  - ROG Boost: 1085MHz* at 40W
+  - 1035MHz Boost Clock + 50MHz OC
+  - 35W + 5W Dynamic Boost
+  - 4GB GDDR6 128 bits
+  - Intel(R) Iris(R) Xe Graphics Alder Lake GT2
 
 - Placa-mãe: ASUSTeK COMPUTER INC. ROG Flow Z13 GZ301ZE
 
-- Display: Tela ROG Nebula 13.4-inch - UHD+ 16:10 (3840 x 2400, WQUXGA)
+- Display: Tela ROG Nebula 13.4-inch
+  - UHD+ 16:10 (3840 x 2400, WQUXGA)
   - IPS-level - Glossy display - DCI-P3: 100
   - Touch Screen (10 Touch Points full zone)
   - Refresh Rate: 120Hz - Response Time: 30ms
-  - Adaptive-Sync - Pantone Validated - Support stylus - MUX Switch + Optimus
+  - Adaptive-Sync - Pantone Validated
+  - Support stylus - MUX Switch + Optimus
 
 - Caneta/stylus: Asus Pen 2.0 SA203H
 
@@ -52,7 +57,8 @@ ROG Flow Z13 (2022) GZ301ZE
   - Built-in 3-microphone array
   - 2-speaker system with Smart Amplifier Technology
 
-- Resfriamento: CPU and GPU Cool with Liquid Metal - Vapor chamber cooling
+- Resfriamento: CPU and GPU Cool with Liquid Metal
+  - Vapor chamber cooling
   - Whisper quiet fans, Updated Arc flow Fans™ - 0dB Ambient Cooling
   - 0.15mm Ultra thin fins for the win
   - Thermal energy is dissipated by two heatsinks
@@ -124,9 +130,12 @@ ROG Flow Z13 (2022) GZ301ZE
     - 4x USB 3.0
 
 - Monitores:
-  - 3x Lenovo ThinkVision 27" T27i-30 FHD (1920x1080) 60Hz
-  - 1x LG Flatron E2360 LED widescreen 23” (1920x1080) 60Hz
-  - 1x Philips 226VL widescreen 21.5" (1920x1080) 60Hz
+  - 3x Lenovo ThinkVision 27" T27i-30 FHD
+    - 1920x1080 60Hz
+  - 1x LG Flatron E2360 LED widescreen 23”
+    - 1920x1080 60Hz
+  - 1x Philips 226VL widescreen 21.5"
+    - 1920x1080 60Hz
 
 ## Sistema
 
@@ -136,4 +145,5 @@ ROG Flow Z13 (2022) GZ301ZE
 
 - Dualboot (Bazzite/Fedora) - Grub Manager
 
-- Rede: Operadora Vivo - 700 Mb/s downloads/uploads
+- Rede: Operadora Vivo
+  - 700 Mb/s downloads/uploads
