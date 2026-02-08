@@ -1,0 +1,19 @@
+services:
+  app:
+    image: node:18-alpine
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    command: ["sh", "-c", "node --version && npm --version"]
+
+  nginx:
+    image: nginx:1.26-alpine
+    profiles: ["web"]
+    ports:
+      - "8080:80"
+
+  apache:
+    image: httpd:2.4-alpine
+    profiles: ["web"]
+    ports:
+      - "8081:80"

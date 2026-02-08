@@ -1,0 +1,8 @@
+flowchart LR
+  Dev[Desenvolvedor] -->|edita| Dotfiles[(Dotfiles)]
+  Dev -->|altera| Nix[(NixOS/Flakes)]
+  Dotfiles --> Shell[Shell/Editor/CLI]
+  Nix --> System[SO Imutável]
+  System --> Security[Hardening]
+  System --> Repro[Reprodutibilidade]
+  Shell --> Productivity[Produtividade]
