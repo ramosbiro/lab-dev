@@ -33,3 +33,5 @@ Inclua prints ou saída de comandos em `docs/evidence/` (opcional).
 - Docker Desktop integrado com WSL2.
 - Shell padrão alterado para /usr/bin/zsh.
 - Linguagens instaladas: Node.js, Go, Java, Rust, Python (pip/venv).
+- DevOps instalados: Terraform, kubectl, Helm, Ansible, Google Cloud SDK, AWS CLI.
+- PATH do pipx: /home/ramos/.local/bin

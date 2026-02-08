@@ -25,6 +25,14 @@
 - cargo: 1.93.0
 - gradle/maven: não encontrado
 
+## Node (globais)
+
+- pnpm: 10.29.1
+- yarn: 1.22.22
+- typescript: 5.9.3
+- eslint: 9.39.2
+- prettier: 3.8.1
+
 ## Containers e Infra
 
 - Docker: 29.1.5
@@ -41,9 +49,33 @@
 - zsh/bash: zsh 5.9
 
 ## Utilitários
-
+- build-essential
+- cmake
+- pkg-config
 - fzf: 0.44.1
 - ripgrep: 14.1.0
 - bat: 0.24.0 (batcat)
 - curl: instalado
 - unzip: instalado
+- jq: instalado
+- htop: instalado
+- tree: instalado
+- neofetch: instalado
+
+## DevOps e Cloud
+
+- Terraform: 1.14.4
+- kubectl: 1.34.1
+- Helm: v3.20.0+gb2e4314
+- Google Cloud SDK: 555.0.0
+- AWS CLI: 2.33.17
+- Ansible: core 2.16.3
+- Azure CLI (Windows): 2.83.0
+
+## Python (pipx)
+
+- Poetry: 2.3.2
+- Pipenv: 2026.0.3
+- IPython: 9.10.0
+- Cookiecutter: 2.6.0
+- Ruff: 0.15.0
