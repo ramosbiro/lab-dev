@@ -14,6 +14,7 @@ Padronizar o uso de containers no ambiente WSL2.
 Arquivo: `docker-compose.yml`
 
 Inclui:
+
 - `app`: container Node para executar comandos de verificação.
 - `nginx`: perfil `web` (opcional).
 - `apache`: perfil `web` (opcional).

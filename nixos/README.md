@@ -7,5 +7,3 @@ Coloque aqui módulos, flakes e perfis do sistema.
 - `hosts/`
 - `modules/`
 - `profiles/`
-
-> Substitua por suas configurações reais.
