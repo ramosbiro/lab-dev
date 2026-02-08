@@ -5,7 +5,9 @@
 ROG Flow Z13 (2022) GZ301ZE
 
 - CPU: Processador Intel® Core™ i9-13900H de 13ª geração de 2,6 GHz
-  (24M Cache, up to 5.4 GHz, 14 cores: 6 P and 8 E) Alder Lake TDP 45W
+  - 24M Cache, up to 5.4 GHz
+  - 14 cores: 6 P and 8 E
+  - Alder Lake TDP 45W
   - Socket 1744 FCBGA - 10nm - Threads 20
 
 - GPU: NVIDIA® GeForce RTX™ 3050 Ti Laptop GPU GDDR6
@@ -34,19 +36,24 @@ ROG Flow Z13 (2022) GZ301ZE
 
 - Câmera: 13MP - infrared de 5 MP - 720P HD camera
 
-- SSD/HDD: PCIe® 4.0 NVMe™ M.2 SSD (2230) WD PC SN740 2TB (principal)
+- SSD/HDD: PCIe® 4.0 NVMe™ M.2 SSD (2230)
+  - WD PC SN740 2TB (principal)
 
 - I/O Ports:
   - 1x 3.5mm Combo Audio Jack
-  - 1x USB 3.2 Gen 2 Type-C (DisplayPort™ / power delivery / G-SYNC)
+  - 1x USB 3.2 Gen 2 Type-C
+    - DisplayPort™ / power delivery / G-SYNC
     - data speed up to 10Gbps
-  - 1x USB 2.0 Type-A (data speed up to 480Mbps)
+  - 1x USB 2.0 Type-A
+    - data speed up to 480Mbps
   - 1x Thunderbolt™ 4 (DisplayPort™ / power delivery)
     - data speed up to 40Gbps
   - 1x ROG XG Mobile Interface and USB Type-C combo port
     - USB 3.2 Gen2, DisplayPort™ 1.4, data speed up to 10Gbps
-  - 1x card reader (microSD) (UHS-II)
-  - 1x USB 3.2 Gen 2 Type-C (DisplayPort™ / power delivery / G-SYNC)
+  - 1x card reader (microSD)
+    - UHS-II
+  - 1x USB 3.2 Gen 2 Type-C
+    - DisplayPort™ / power delivery / G-SYNC
 
 - Áudio:
   - Smart Amp Technology
@@ -59,7 +66,8 @@ ROG Flow Z13 (2022) GZ301ZE
 
 - Resfriamento: CPU and GPU Cool with Liquid Metal
   - Vapor chamber cooling
-  - Whisper quiet fans, Updated Arc flow Fans™ - 0dB Ambient Cooling
+  - Whisper quiet fans, Updated Arc flow Fans™
+  - 0dB Ambient Cooling
   - 0.15mm Ultra thin fins for the win
   - Thermal energy is dissipated by two heatsinks
   - Profiles Armoury Crate: Silence, Performance, Turbo
@@ -88,12 +96,13 @@ ROG Flow Z13 (2022) GZ301ZE
 - Peso: 1.18 Kg (2.60 lbs)
 
 - Dimensões (W x D x H): 30.2 x 20.4 x 1.20 ~ 1.59 cm
-  (11.89" x 8.03" x 0.47" ~ 0.63")
+  - 11.89" x 8.03" x 0.47" ~ 0.63"
 
 ## Periféricos
 
-- Teclado e Touchpad: Backlit Chiclet Keyboard 1-Zone retroiluminado RGB
-  and Touchpad (removível)
+- Teclado e Touchpad: Backlit Chiclet Keyboard 1-Zone
+  - retroiluminado RGB
+  - Touchpad (removível)
 
 - Teclado externo: Redragon ASHE PRO Gaming K626P-KBS
   - Switch Otemu RED

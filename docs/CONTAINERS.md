@@ -10,7 +10,8 @@ Este repositório prioriza o uso de containers para ambientes consistentes.
 - Apache
 
 Status atual no WSL2: Docker 29.1.5 e Docker Compose v5.0.1 disponíveis.
-Nginx/Apache não encontrados (instalar apenas quando necessário por projeto).
+Nginx/Apache não encontrados (instalar apenas quando necessário por
+projeto).
 
 ## Boas Práticas
 

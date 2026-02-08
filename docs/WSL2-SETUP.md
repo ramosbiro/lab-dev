@@ -2,9 +2,11 @@
 
 ## Objetivo
 
-Documentar o ambiente WSL2 e como ele é configurado para desenvolvimento com foco em containers.
+Documentar o ambiente WSL2 e como ele é configurado para desenvolvimento
+com foco em containers.
 
-Ambiente atual: Windows 11 Pro 25H2 + WSL2 (Ubuntu 24.04.3 LTS) com shell bash.
+Ambiente atual: Windows 11 Pro 25H2 + WSL2 (Ubuntu 24.04.3 LTS)
+com shell bash.
 
 ## Passo a Passo (Resumo)
 
@@ -33,5 +35,6 @@ Inclua prints ou saída de comandos em `docs/evidence/` (opcional).
 - Docker Desktop integrado com WSL2.
 - Shell padrão alterado para /usr/bin/zsh.
 - Linguagens instaladas: Node.js, Go, Java, Rust, Python (pip/venv).
-- DevOps instalados: Terraform, kubectl, Helm, Ansible, Google Cloud SDK, AWS CLI.
+- DevOps instalados: Terraform, kubectl, Helm, Ansible, Google Cloud SDK,
+  AWS CLI.
 - PATH do pipx: /home/ramos/.local/bin

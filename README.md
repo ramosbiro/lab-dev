@@ -4,7 +4,10 @@
 ![Dotfiles](https://img.shields.io/badge/Dotfiles-111111?logo=gnubash&logoColor=white)
 ![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
 
-Este repositório documenta um ambiente de desenvolvimento imutável, reproduzível e seguro, baseado em Windows 11 Pro (WSL2 com Ubuntu/Debian) e foco em containers (Docker/Compose). O objetivo é demonstrar automação do sistema, hardening e um fluxo de trabalho profissional.
+Este repositório documenta um ambiente de desenvolvimento imutável,
+reproduzível e seguro, baseado em Windows 11 Pro (WSL2 com Ubuntu/Debian)
+e foco em containers (Docker/Compose). O objetivo é demonstrar automação do
+sistema, hardening e um fluxo de trabalho profissional.
 
 ## Objetivos
 
@@ -64,7 +67,8 @@ Detalhes completos em `docs/INSTALLATION.md` e `docs/WSL2-SETUP.md`.
 
 ## CI
 
-O pipeline valida Markdown para garantir documentação consistente a cada commit.
+O pipeline valida Markdown para garantir documentação consistente a cada
+commit.
 
 ## Conventional Commits
 

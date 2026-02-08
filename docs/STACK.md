@@ -49,6 +49,7 @@
 - zsh/bash: zsh 5.9
 
 ## Utilitários
+
 - build-essential
 - cmake
 - pkg-config
