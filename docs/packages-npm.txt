@@ -1,5 +1,22 @@
-eslint@9.39.2
+# =============================================================================
+# 🚀 GLOBAL NODE.JS PACKAGES (NPM/PNPM/YARN)
+# Infrastructure: Immutable Lab / WSL2 (Ubuntu 24.04 LTS)
+# Updated: 2026-02-23
+# Environment: ASUS ROG Flow Z13 (i9-13900H)
+# =============================================================================
+
+# --- Package Managers ---
 pnpm@10.29.1
-prettier@3.8.1
-typescript@5.9.3
 yarn@1.22.22
+
+# --- Core Development & Languages ---
+typescript@5.9.3
+
+# --- Linting & Code Quality ---
+eslint@9.39.2
+prettier@3.8.1
+
+# =============================================================================
+# MAINTENANCE NOTE:
+# To update this list, run: npm list -g --depth=0 > docs/packages-npm.txt
+# =============================================================================
