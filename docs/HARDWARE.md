@@ -1,158 +1,84 @@
-# Hardware
+# 🖥️ Full Hardware Specification: Performance & Observability
 
-## Máquina principal
+This document provides the exhaustive technical specifications of the infrastructure powering the **Immutable Infrastructure Lab**. It details the main computing unit, high-density visualization array, and specialized peripherals.
 
-ROG Flow Z13 (2022) GZ301ZE
+---
 
-- CPU: Processador Intel® Core™ i9-13900H de 13ª geração de 2,6 GHz
-  - 24M Cache, up to 5.4 GHz
-  - 14 cores: 6 P and 8 E
-  - Alder Lake TDP 45W
-  - Socket 1744 FCBGA - 10nm - Threads 20
+## 🧠 Main Computing Unit: ASUS ROG Flow Z13 (2022)
 
-- GPU: NVIDIA® GeForce RTX™ 3050 Ti Laptop GPU GDDR6
-  - ROG Boost: 1085MHz* at 40W
-  - 1035MHz Boost Clock + 50MHz OC
-  - 35W + 5W Dynamic Boost
-  - 4GB GDDR6 128 bits
-  - Intel(R) Iris(R) Xe Graphics Alder Lake GT2
+The system is centered around a high-performance hybrid workstation (GZ301ZE) optimized for extreme multitasking and I/O throughput.
 
-- Placa-mãe: ASUSTeK COMPUTER INC. ROG Flow Z13 GZ301ZE
+### ⚙️ Core Processing & Graphics
+| Component | Detailed Specification |
+| :--- | :--- |
+| **Model** | ROG Flow Z13 (2022) GZ301ZE (Motherboard: ASUSTeK GZ301ZE) |
+| **CPU** | 13th Gen Intel® Core™ i9-13900H (Alder Lake - 10nm) |
+| **Cores/Threads** | 14 Cores (6 P-cores + 8 E-cores) | 20 Threads |
+| **Clock/Cache** | 2.6 GHz Base / Up to 5.4 GHz Turbo | 24M Cache |
+| **TDP** | 45W | Socket 1744 FCBGA |
+| **Discrete GPU** | NVIDIA® GeForce RTX™ 3050 Ti Laptop (4GB GDDR6 128-bit) |
+| **GPU Boost** | ROG Boost: 1085MHz* at 40W (1035MHz + 50MHz OC) | 35W+5W Dynamic |
+| **Integrated GPU** | Intel® Iris® Xe Graphics (Alder Lake GT2) |
+| **RAM** | 16 GB LPDDR5 (Samsung) |
+| **Main SSD** | 2TB WD PC SN740 PCIe® 4.0 NVMe™ M.2 (2230) |
 
-- Display: Tela ROG Nebula 13.4-inch
-  - UHD+ 16:10 (3840 x 2400, WQUXGA)
-  - IPS-level - Glossy display - DCI-P3: 100
-  - Touch Screen (10 Touch Points full zone)
-  - Refresh Rate: 120Hz - Response Time: 30ms
-  - Adaptive-Sync - Pantone Validated
-  - Support stylus - MUX Switch + Optimus
+### 📺 Integrated Display & Multimedia
+* **Panel:** 13.4-inch ROG Nebula Display (UHD+ 16:10 | 3840 x 2400)
+* **Features:** 120Hz Refresh Rate, 30ms Response, Pantone Validated, Adaptive-Sync.
+* **Touch:** 10-point Multi-touch with Asus Pen 2.0 (SA203H) support.
+* **Cameras:** 13MP Rear Camera + 5MP Infrared (IR) Front Camera (720P HD).
+* **Audio:** 2-speaker system with Smart Amp, Dolby Atmos®, Hi-Res Certification, and 3-microphone array with AI Noise-canceling.
 
-- Caneta/stylus: Asus Pen 2.0 SA203H
+### 🔋 Power & Thermal Management
+* **Battery:** 4-cell Li-ion (56WHrs) | Design Capacity: 56,002 mWh | Health: ~80.6%.
+* **Charging:** 100W USB-C AC Adapter (A20-100P1A) | Output: 20V DC, 5A.
+* **Cooling:** Vapor Chamber, Liquid Metal (CPU/GPU), 0.15mm Ultra-thin fins, 0dB Ambient Cooling.
+* **BIOS:** GZ301ZE.321 (04/17/2025).
 
-- Rede: Wi-Fi 6E(802.11ax) (Triple band) 2*2 + Bluetooth® 5.2
-  Wireless Card
+---
 
-- RAM: 16 GB LPDDR5 Samsung
+## 📺 External Observability Array (6 Screens Total)
 
-- Câmera: 13MP - infrared de 5 MP - 720P HD camera
+Configured for **High-Density Observability**, allowing simultaneous tracking of kernel metrics, transaction logs, and IDE instances.
 
-- SSD/HDD: PCIe® 4.0 NVMe™ M.2 SSD (2230)
-  - WD PC SN740 2TB (principal)
+| Quantity | Model | Specification |
+| :--- | :--- | :--- |
+| 3x | **Lenovo ThinkVision 27"** | T27i-30 (FHD 1920x1080 @ 60Hz) |
+| 1x | **LG Flatron E2360 LED** | 23" Widescreen (1920x1080 @ 60Hz) |
+| 1x | **Philips 226VL** | 21.5" Widescreen (1920x1080 @ 60Hz) |
+| 1x | **Integrated ROG Nebula** | 13.4" UHD+ (3840 x 2400 @ 120Hz) |
 
-- I/O Ports:
-  - 1x 3.5mm Combo Audio Jack
-  - 1x USB 3.2 Gen 2 Type-C
-    - DisplayPort™ / power delivery / G-SYNC
-    - data speed up to 10Gbps
-  - 1x USB 2.0 Type-A
-    - data speed up to 480Mbps
-  - 1x Thunderbolt™ 4 (DisplayPort™ / power delivery)
-    - data speed up to 40Gbps
-  - 1x ROG XG Mobile Interface and USB Type-C combo port
-    - USB 3.2 Gen2, DisplayPort™ 1.4, data speed up to 10Gbps
-  - 1x card reader (microSD)
-    - UHS-II
-  - 1x USB 3.2 Gen 2 Type-C
-    - DisplayPort™ / power delivery / G-SYNC
+---
 
-- Áudio:
-  - Smart Amp Technology
-  - Hi-Res certification (for headphone)
-  - Dolby Atmos®
-  - AI noise-canceling technology
-  - Certificação HiRes
-  - Built-in 3-microphone array
-  - 2-speaker system with Smart Amplifier Technology
+## 🌐 I/O Ports & Connectivity
 
-- Resfriamento: CPU and GPU Cool with Liquid Metal
-  - Vapor chamber cooling
-  - Whisper quiet fans, Updated Arc flow Fans™
-  - 0dB Ambient Cooling
-  - 0.15mm Ultra thin fins for the win
-  - Thermal energy is dissipated by two heatsinks
-  - Profiles Armoury Crate: Silence, Performance, Turbo
+* **Thunderbolt™ 4:** Support for DisplayPort™ / Power Delivery (Up to 40Gbps).
+* **USB-C Gen 2:** 2x Type-C (DisplayPort™ / Power Delivery / G-SYNC) @ 10Gbps.
+* **XG Mobile Interface:** Dedicated port for ROG external GPU and I/O expansion.
+* **USB-A:** 1x USB 2.0 (480Mbps).
+* **Storage Interfaces:** microSD Card Reader (UHS-II) + 3.5mm Audio Combo.
+* **Wireless:** Wi-Fi 6E (802.11ax) Triple Band + Bluetooth® 5.2.
 
-- Bateria: 56WHrs, 4S1P, 4-cell Li-ion
-  - Nome: ASUS Battery
-  - Fabricante: ASUSTeK
-  - Química: Li-ion
-  - Design capacity: 56.002 mWh
-  - Full charge capacity: 45.120 mWh
-  - Full charge capacity (histórico): 45.200 mWh
-  - Cycle count: 60
-  - Saúde estimada: ~80.6%
-  - Report time: 2026-02-08 05:29:09
+---
 
-- Bios: GZ301ZE.321 04/17/2025
+## ⌨️ Peripherals & External Storage
 
-- OS Build: 26100.1.amd64fre.ge_release.240331-1435
+### Input Devices
+* **External Keyboard:** Redragon ASHE PRO K626P-KBS (Otemu Red Switches).
+* **Mouse:** Redragon Prediction Pro Wireless M901P-KS.
+* **Controller:** Manba One V2 (Hall Effect Sticks/Triggers | 2" RGB Screen | 1800mAh).
+* **Audio:** ROG Cetra True Wireless.
 
-- Carregamento: TYPE-C, 100W AC Adapter A20-100P1A
-  - Output: 20V DC, 5A, 100W
-  - Input: 100~240V AC, 50/60Hz universal
+### Docks & Expansion
+* **Dock 1:** MSL FORCE USB-C Hub (10G) + NVMe Enclosure (LAN, HDMI, DP, USB 3.1).
+* **Dock 2:** Knup KP-T107 (4x USB 3.0).
+* **External Drives:** 3x 1TB SSDs (Realtek RTL9210 NVMe) + 2x 1TB SDXC Cards.
 
-- Aura Sync - Aura Sync Light Bar
+---
 
-- Peso: 1.18 Kg (2.60 lbs)
+## 💻 Operating Systems & Network
 
-- Dimensões (W x D x H): 30.2 x 20.4 x 1.20 ~ 1.59 cm
-  - 11.89" x 8.03" x 0.47" ~ 0.63"
-
-## Periféricos
-
-- Teclado e Touchpad: Backlit Chiclet Keyboard 1-Zone
-  - retroiluminado RGB
-  - Touchpad (removível)
-
-- Teclado externo: Redragon ASHE PRO Gaming K626P-KBS
-  - Switch Otemu RED
-
-- Mouse: Redragon Predition Pro Wireless M901P-KS Gaming
-
-- Headset: Rog Cetra True Wireless
-
-- Outros:
-  - 3x SSD externo 1TB (Realtek RTL9210 NVME)
-  - 2x SD Card SDXC 1TB
-
-- Joystick: Manba One V2 Hall Effects Sticks
-  - Triggers Linear Hall Effects
-  - RGB light display 2"
-  - 1800mAh
-  - Wireless USB adapter 2.4 GHz
-  - Bluetooth + Charging Station
-
-- Dock/Hub:
-  - MSL FORCE USB C Hub 10G With M2 SSD Enclosure
-    - 1x M2 SSD (2280, 2242, 2230)
-    - 1x LAN Port
-    - 1x HDMI
-    - 1x DisplayPort
-    - 1x Jack P2
-    - 3x USB-C (1x PD, 1x Data, 1x Exit)
-    - 1x USB 3.1
-    - 2x USB 3.0
-    - 1x TF Card
-    - 1x SD Card
-
-  - Knup KP-T107
-    - 4x USB 3.0
-
-- Monitores:
-  - 3x Lenovo ThinkVision 27" T27i-30 FHD
-    - 1920x1080 60Hz
-  - 1x LG Flatron E2360 LED widescreen 23”
-    - 1920x1080 60Hz
-  - 1x Philips 226VL widescreen 21.5"
-    - 1920x1080 60Hz
-
-## Sistema
-
-- Windows 11 Pro 25H2 - Compilação 26220.7752
-
-- WSL2 (Ubuntu/Debian) Ubuntu 24.04.3 LTS
-
-- Dualboot (Bazzite/Fedora) - Grub Manager
-
-- Rede: Operadora Vivo
-  - 700 Mb/s downloads/uploads
+* **Main Host:** Windows 11 Pro (25H2 | Build 26220.7752).
+* **Linux Environment:** WSL2 (Ubuntu 24.04.3 LTS / Debian).
+* **Dual-Boot:** Bazzite (Fedora-based) managed via GRUB.
+* **Network Throughput:** Vivo Fiber (700 Mb/s Symmetric Download/Upload).
