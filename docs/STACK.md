@@ -18,11 +18,11 @@ The core environment is built on a high-performance Linux subsystem integrated w
 
 ## 🚀 Core Development Languages
 
-A polyglot environment supporting mission-critical development and automation.
+A polyglot environment supporting mission-critical development and automation, drawing from 20+ years of technical expertise.
 
 | Language | Version | Ecosystem Focus |
 | :--- | :--- | :--- |
-| **PHP** | 8.x (Laravel) | VILT Stack & Institutional Systems |
+| **PHP** | 8.x (Laravel) | VILT Stack & Institutional Systems (PMESP) |
 | **Node.js** | v18.19.1 | Frontend Hydration & Build Tools |
 | **Python** | 3.12.3 | Automation, Scripting & AI |
 | **Go** | 1.22.2 | Cloud Native & System Tooling |
@@ -33,7 +33,7 @@ A polyglot environment supporting mission-critical development and automation.
 
 ## 📦 Package & Build Management
 
-Efficient dependency orchestration across multiple runtimes.
+Efficient dependency orchestration across multiple runtimes, ensuring performance on the **WD SN740 2TB NVMe**.
 
 ```bash
 # Node.js Global Toolchain
@@ -44,10 +44,33 @@ poetry: 2.3.2 | ruff: 0.15.0 | ipython: 9.10.0
 
 # System Build Tools
 build-essential | cmake | pkg-config | cargo: 1.93.0
+```
 
+☁️ DevOps, Cloud & Infrastructure
+Enabling rapid cloud orchestration and container security for complex development cycles.
+
+Orchestration: Docker 29.1.5 | Docker Compose v5.0.1
+
+IaC: Terraform 1.14.4 | Ansible Core 2.16.3
+
+Kubernetes: Kubectl 1.34.1 | Helm v3.20.0
+
+Cloud CLI: Google Cloud SDK 555.0 | AWS CLI 2.33.1 | Azure CLI 2.83.0
+
+🛠️ CLI Utilities (Power User Workflow)
+Optimized tools for real-time observability across the 6-monitor array.
+
+```bash
 # Search & Navigation
 fzf (0.44.1) | ripgrep (14.1.0) | tree | jq
 
 # Visualization & Performance
 htop | bat (batcat) | neofetch | curl | unzip
 ```
+
+✍️ Editor & Version Control
+IDE: VS Code (Remote-WSL Integration)
+
+SCM: Git 2.43.0
+
+Remote Access: OpenSSH 9.6p1 (Ed25519)
