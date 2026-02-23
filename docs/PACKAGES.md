@@ -39,15 +39,9 @@ pip freeze > docs/packages-pip.txt
 ---
 
 ## 🛡️ Dependency Integrity
-Audit Schedule: Weekly checks for outdated packages via npm outdated and pip list --outdated.
 
-Security Scanning: Automated scanning of dependency lists for known vulnerabilities using institutional security standards.
+* Audit Schedule: Weekly checks for outdated packages via npm outdated and pip list --outdated.
 
-Storage Optimization: Regular execution of apt autoremove and npm cache clean to maintain peak performance on the ROG Flow Z13.
+* Security Scanning: Automated scanning of dependency lists for known vulnerabilities using institutional security standards.
 
-
-
-
-
-
-
+* Storage Optimization: Regular execution of apt autoremove and npm cache clean to maintain peak performance on the ROG Flow Z13.
