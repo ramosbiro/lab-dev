@@ -1,8 +1,8 @@
 ## 🛠️ Lab & Infrastructure
 
 <div align="center">
-  <img src="22.jpeg" width="45%" />
   <img src="11.jpeg" width="45%" />
+  <img src="22.jpeg" width="45%" />
 </div>
 
 * **Hardware:** ASUS ROG Flow Z13
@@ -106,4 +106,5 @@ Exemplos:
 - `docs/architecture.md`
 - `docs/PACKAGES.md`
 - `docs/SETUP-RAPIDO.md`
+
 
