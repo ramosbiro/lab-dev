@@ -1,40 +1,54 @@
-# Setup WSL2 (Windows 11 Pro 25H2)
+# 🐧 WSL2 & Kernel Optimization
 
-## Objetivo
+This document details the specialized configuration and tuning applied to the **Windows Subsystem for Linux (WSL2)**. The goal is to maximize the performance of the **13th Gen Intel® Core™ i9-13900H** while maintaining a stable, secure, and high-throughput environment for **Immutable Infrastructure** workflows.
 
-Documentar o ambiente WSL2 e como ele é configurado para desenvolvimento
-com foco em containers.
+---
 
-Ambiente atual: Windows 11 Pro 25H2 + WSL2 (Ubuntu 24.04.3 LTS)
-com shell bash.
+## ⚙️ Core Configuration (.wslconfig)
 
-## Passo a Passo (Resumo)
+To prevent resource contention between the Windows host and the virtualized Linux environments, a global `.wslconfig` is implemented. This optimizes the 20 threads and 16GB LPDDR5 RAM of the **ROG Flow Z13**.
 
-1. Instalar e atualizar o WSL2.
-2. Instalar a distro Ubuntu/Debian.
-3. Configurar shell, editor e Git.
-4. Instalar Docker e Docker Compose no WSL2.
-5. Configurar rede e integração com Windows.
+```ini
+[wsl2]
+# High-performance allocation for the i9-13900H (14 Cores / 20 Threads)
+processors=14
+memory=12GB
+swap=4GB
 
-## Checklist de Configuração
+# Advanced Networking & I/O
+networkingMode=mirrored
+dnsTunneling=true
+firewall=true
+autoProxy=true
 
-- [x] WSL2 instalado e atualizado
-- [x] Distro instalada
-- [x] Usuário configurado
-- [x] Shell customizado (zsh + Oh My Zsh)
-- [x] Git configurado (user.name/user.email definidos)
-- [x] Docker e Compose instalados no WSL2
-- [ ] Nginx/Apache disponíveis quando necessário
+---
 
-## Evidências do Setup
+## 🚀 Kernel & System Tuning
+The laboratory utilizes a modern kernel tailored for high I/O throughput and container orchestration.
 
-Inclua prints ou saída de comandos em `docs/evidence/` (opcional).
+* **Current Kernel:** 6.6.87.2-microsoft-standard-WSL2.
+* **Storage Optimization:** Leveraging **VirtioFS** for the **2TB WD PC SN740 NVMe**, ensuring near-native speeds for Docker-based databases and massive project directories.
+* **Process Priority:** Utilizing `cgroups` to ensure mission-critical services (Laravel/VILT Stack) receive priority during heavy compilation cycles.
 
-## Observações
+---
 
-- Docker Desktop integrado com WSL2.
-- Shell padrão alterado para /usr/bin/zsh.
-- Linguagens instaladas: Node.js, Go, Java, Rust, Python (pip/venv).
-- DevOps instalados: Terraform, kubectl, Helm, Ansible, Google Cloud SDK,
-  AWS CLI.
-- PATH do pipx: /home/ramos/.local/bin
+## 🐚 Environment & Shell Hardening
+Aligned with **PMESP** security standards, the shell environment is hardened for defensive and development operations:
+
+* **Zsh Orchestration:** Powering the terminal with **Oh My Zsh**, focused on real-time observability (Git status, CPU load, and Docker context).
+* **SSH Persistence:** Configured with `ssh-agent` for **Ed25519** key management, ensuring secure, encrypted access to remote infrastructure.
+* **Dotfiles Synchronization:** Managed through the `/dotfiles` directory for atomic deployments and consistent environments across different distributions.
+
+---
+
+## 📺 Multi-Display Observability
+Integration with the **6-monitor array** is handled via specialized terminal multiplexing to manage high-density information:
+
+* **Tmux 3.4:** Used to manage persistent sessions and complex layouts across multiple screens.
+* **Window Management:** Synchronized panes for real-time log tailing and system monitoring (btop/htop) on dedicated observability displays.
+
+---
+
+## 🛡️ Resilience & Disaster Recovery
+* **Snapshot Strategy:** Periodic exports of the WSL2 distribution (.tar) to cold storage for instant recovery.
+* **NixOS Integration:** Declarative package management ensures that the userland environment is 100% reproducible and can be rebuilt in minutes.
