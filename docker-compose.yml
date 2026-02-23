@@ -1,19 +1,59 @@
 services:
+  # Laravel Application (PHP 8.3 FPM)
   app:
-    image: node:18-alpine
-    working_dir: /workspace
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    image: lab-dev/laravel-app
+    container_name: lab_app
+    restart: unless-stopped
+    working_dir: /var/www
     volumes:
-      - ./:/workspace
-    command: ["sh", "-c", "node --version && npm --version"]
+      - .:/var/www
+    networks:
+      - lab-network
 
+  # Nginx Reverse Proxy
   nginx:
-    image: nginx:1.26-alpine
-    profiles: ["web"]
+    image: nginx:alpine
+    container_name: lab_nginx
+    restart: unless-stopped
     ports:
-      - "8080:80"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/var/www
+      - ./docker/nginx:/etc/nginx/conf.d
+    networks:
+      - lab-network
+    depends_on:
+      - app
 
-  apache:
-    image: httpd:2.4-alpine
-    profiles: ["web"]
-    ports:
-      - "8081:80"
+  # Database (MySQL 8.0)
+  mysql:
+    image: mysql:8.0
+    container_name: lab_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-laravel}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-secret}
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - lab-network
+
+  # Cache & Session (Redis)
+  redis:
+    image: redis:alpine
+    container_name: lab_redis
+    restart: unless-stopped
+    networks:
+      - lab-network
+
+networks:
+  lab-network:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local
