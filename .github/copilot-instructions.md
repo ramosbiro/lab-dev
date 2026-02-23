@@ -1,23 +1,38 @@
-# Copilot Instructions
+# 🤖 GitHub Copilot Custom Instructions
 
-- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+These instructions ensure that AI-generated code and suggestions align with the high-performance and security-first standards of the **Immutable Infrastructure Lab**.
 
-- [x] Clarify Project Requirements
+---
 
-- [x] Scaffold the Project
+## 🏗️ Technical Context & Tech Stack
 
-- [x] Customize the Project
+Copilot must prioritize suggestions compatible with:
+* **Backend:** PHP 8.x (Laravel Framework) utilizing the VILT Stack (Vue, Inertia, Laravel, Tailwind).
+* **Infrastructure:** NixOS (Declarative/Immutable) and Docker (Rootless orchestration).
+* **Environment:** WSL2 (Ubuntu 24.04 LTS) on an **i9-13900H** hybrid architecture.
+* **Standards:** PSR-12, institutional security protocols (PMESP), and Zero-Trust principles.
 
-- [x] Install Required Extensions
+---
 
-- [x] Compile the Project
+## 🛠️ Code Quality Guidelines
 
-- [x] Create and Run Task
+* **Seniority Level:** Provide concise, production-ready code. Avoid verbose explanations for standard patterns.
+* **Performance:** Favor code that is optimized for high-throughput and low-latency, considering the **2TB NVMe** storage environment.
+* **Safety:** Always prefer **Ed25519** for SSH logic and **AES-256** for encryption-related snippets.
+* **Immutability:** When suggesting system scripts, favor declarative approaches (Nix) over imperative shell commands.
 
-- [x] Launch the Project
+---
 
-- [x] Ensure Documentation is Complete
+## 🛡️ Security Restrictions
 
-- Work through each checklist item systematically.
-- Keep communication concise and focused.
-- Follow development best practices.
+* **No Hardcoding:** Never suggest hardcoded credentials, API keys, or institutional IPs.
+* **Least Privilege:** Default to non-root user configurations in Dockerfiles and systemd services.
+* **Validation:** Ensure all input handling includes strict validation and sanitization, especially for institutional systems.
+
+---
+
+## 💬 Interaction Style
+
+* **Conciseness:** Be direct and technical. 
+* **Accuracy:** If a solution involves legacy protocols (RSA, PHP 7.x), warn the user and suggest modern alternatives (Ed25519, PHP 8.x).
+* **Context Awareness:** Assume the developer is an expert SysAdmin and Senior Developer with 20+ years of experience.
