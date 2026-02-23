@@ -1,82 +1,52 @@
-# Stack e Ferramentas
+# 🛠️ Technology Stack & Tooling
 
-> Preencha versões conforme seu ambiente.
+This document provides a comprehensive inventory of the languages, frameworks, and infrastructure tools powering the **Immutable Infrastructure Lab**. It reflects a production-grade environment optimized for the **ASUS ROG Flow Z13** and **WSL2**.
 
-## Sistema e Shell
+---
 
-- WSL2: ativo (Windows 11 Pro 25H2)
-- Distro: Ubuntu 24.04.3 LTS (Noble Numbat)
-- Kernel: 6.6.87.2-microsoft-standard-WSL2
-- Shell: /usr/bin/zsh (Oh My Zsh)
-- Terminal: Windows Terminal + PowerShell + WSL2
+## 💻 System & Shell Architecture
 
-## Linguagens
+The core environment is built on a high-performance Linux subsystem integrated with Windows 11 Pro.
 
-- Node.js: v18.19.1
-- Python: 3.12.3
-- Go: go1.22.2
-- Rust: 1.93.0
-- Java: OpenJDK 21.0.10
+* **Host OS:** Windows 11 Pro 25H2
+* **Distro:** Ubuntu 24.04.3 LTS (Noble Numbat)
+* **Kernel:** 6.6.87.2-microsoft-standard-WSL2
+* **Shell:** Zsh 5.9 (Oh My Zsh)
+* **Multiplexer:** Tmux 3.4
 
-## Build e Package Managers
+---
 
-- npm/yarn/pnpm: npm 9.2.0
-- pip/poetry: pip 24.0
-- cargo: 1.93.0
-- gradle/maven: não encontrado
+## 🚀 Core Development Languages
 
-## Node (globais)
+A polyglot environment supporting mission-critical development and automation.
 
-- pnpm: 10.29.1
-- yarn: 1.22.22
-- typescript: 5.9.3
-- eslint: 9.39.2
-- prettier: 3.8.1
+| Language | Version | Ecosystem Focus |
+| :--- | :--- | :--- |
+| **PHP** | 8.x (Laravel) | VILT Stack & Institutional Systems |
+| **Node.js** | v18.19.1 | Frontend Hydration & Build Tools |
+| **Python** | 3.12.3 | Automation, Scripting & AI |
+| **Go** | 1.22.2 | Cloud Native & System Tooling |
+| **Rust** | 1.93.0 | High-performance low-level tooling |
+| **Java** | OpenJDK 21.0.1 | Enterprise legacy & stability |
 
-## Containers e Infra
+---
 
-- Docker: 29.1.5
-- Docker Compose: v5.0.1
-- Nginx: não encontrado
-- Apache: não encontrado
+## 📦 Package & Build Management
 
-## Editor e Dev Tools
+Efficient dependency orchestration across multiple runtimes.
 
-- VS Code: em uso no Windows
-- Git: 2.43.0
-- SSH: OpenSSH_9.6p1
-- tmux: 3.4
-- zsh/bash: zsh 5.9
+```bash
+# Node.js Global Toolchain
+pnpm: 10.29.1 | yarn: 1.22.22 | typescript: 5.9.3
 
-## Utilitários
+# Python (Pipx) Ecosystem
+poetry: 2.3.2 | ruff: 0.15.0 | ipython: 9.10.0
 
-- build-essential
-- cmake
-- pkg-config
-- fzf: 0.44.1
-- ripgrep: 14.1.0
-- bat: 0.24.0 (batcat)
-- curl: instalado
-- unzip: instalado
-- jq: instalado
-- htop: instalado
-- tree: instalado
-- neofetch: instalado
+# System Build Tools
+build-essential | cmake | pkg-config | cargo: 1.93.0
 
-## DevOps e Cloud
+# Search & Navigation
+fzf (0.44.1) | ripgrep (14.1.0) | tree | jq
 
-- Terraform: 1.14.4
-- kubectl: 1.34.1
-- Helm: v3.20.0+gb2e4314
-- Google Cloud SDK: 555.0.0
-- AWS CLI: 2.33.17
-- Ansible: core 2.16.3
-- Azure CLI (Windows): 2.83.0
-
-## Python (pipx)
-
-- Poetry: 2.3.2
-- Pipenv: 2026.0.3
-- IPython: 9.10.0
-- Cookiecutter: 2.6.0
-- Ruff: 0.15.0
+# Visualization & Performance
+htop | bat (batcat) | neofetch | curl | unzip
