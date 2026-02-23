@@ -1,3 +1,51 @@
 [user]
 	name = ramosbiro
 	email = ramosbiro@gmail.com
+	# Assinatura de commits para integridade (GPG)
+	signingkey = YOUR_GPG_KEY_ID 
+
+[core]
+	editor = code --wait
+	autocrlf = input
+	# Melhora a performance no SSD NVMe de 2TB
+	preloadIndex = true
+	fscache = true
+
+[alias]
+	# Atalhos de Sênior para agilizar o workflow
+	st = status
+	co = checkout
+	br = branch
+	cm = commit -m
+	ps = push
+	pl = pull
+	# Log visual tipo grafo para ver nos 6 monitores
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	unstage = reset HEAD --
+	last = log -1 HEAD
+
+[init]
+	defaultBranch = main
+
+[commit]
+	# Exige assinatura em todos os commits (Padrão de Segurança)
+	gpgsign = true
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[color]
+	ui = auto
+
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
