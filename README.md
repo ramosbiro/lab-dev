@@ -1,4 +1,16 @@
-# Laboratório de Infraestrutura Imutável
+## 🛠️ Lab & Infrastructure
+
+<div align="center">
+  <img src="22.jpeg" width="45%" />
+  <img src="11.jpeg" width="45%" />
+</div>
+
+* **Hardware:** ASUS ROG Flow Z13
+* **Environment:** Multi-monitor array (6 screens) for high-density monitoring.
+* **Operating Systems:** Linux Specialist (Bazzite, NixOS, Arch, RHEL, Debian).
+* **Core Focus:** Senior Full Stack Development & Infrastructure Engineering.
+
+## Laboratório de Infraestrutura Imutável
 
 ![NixOS](https://img.shields.io/badge/NixOS-5277C3?logo=nixos&logoColor=white)
 ![Dotfiles](https://img.shields.io/badge/Dotfiles-111111?logo=gnubash&logoColor=white)
@@ -94,3 +106,4 @@ Exemplos:
 - `docs/architecture.md`
 - `docs/PACKAGES.md`
 - `docs/SETUP-RAPIDO.md`
+
