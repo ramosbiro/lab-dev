@@ -43,14 +43,28 @@ services:
           cpus: '4.0'
           memory: 2G
 ```
+---
+
+## 🚀 Workflow Commands
+
+Standardized aliases and commands for rapid laboratory management and CI/CD consistency:
+
+### 1. Project Initialization
+```bash
 # Clean start with force-build and orphan removal
 # Ensures no stale configuration persists between sessions
 docker compose up -d --build --remove-orphans
+```
 
+2. Observability & Runtime Audit
+```bash
 # Real-time health and resource audit
 # Essential for monitoring resource contention on the 6-monitor array
 docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}"
+```
 
+3. Infrastructure Maintenance
+```bash
 # Pruning unused resources to maintain SN740 2TB SSD efficiency
 docker system prune -f --volumes
-
+```
