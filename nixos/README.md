@@ -34,3 +34,27 @@ Run these commands from the root of the laboratory to apply changes:
 ### 1. Apply System Configuration
 ```bash
 sudo nixos-rebuild switch --flake .#default
+```
+
+---
+
+## 2. Update Flake Inputs
+```bash
+nix flake update
+```
+
+---
+
+## 3. Garbage Collection
+```bash
+nix-collect-garbage -d
+```
+
+---
+
+🛡️ Security & Institutional Compliance
+
+* All system configurations are audited against PMESP security standards, ensuring that kernel hardening and network policies are enforced at the OS level.
+
+
+
