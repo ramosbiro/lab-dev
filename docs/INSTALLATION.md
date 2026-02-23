@@ -77,9 +77,10 @@ Composer: Install the latest global binary for PHP dependency management.
 
 ---
 
-🛡️ Final Security Check
+## 🛡️ Final Security Check
 SSH: Generate new Ed25519 keys.
 
 BitLocker: Verify that the 2TB NVMe is fully encrypted.
 
 Audit: Run a system-wide update check to ensure zero-day vulnerabilities are patched.
+
