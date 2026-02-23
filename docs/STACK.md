@@ -50,3 +50,4 @@ fzf (0.44.1) | ripgrep (14.1.0) | tree | jq
 
 # Visualization & Performance
 htop | bat (batcat) | neofetch | curl | unzip
+```
