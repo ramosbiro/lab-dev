@@ -30,26 +30,6 @@ As a **Security Specialist**, my container strategy incorporates multiple layers
 * **Stateless Design:** Containers are treated as ephemeral. All persistent data (database files, logs, uploads) are mapped to external **Docker Volumes** or the host filesystem.
 * **Rootless Operation:** Services are configured to run under a dedicated UID/GID to mitigate the risk of host-level privilege escalation.
 
-🚀 Workflow Commands
-Standardized aliases and commands for rapid laboratory management and CI/CD consistency:
-
-1. Project Initialization
-
-# Clean start with force-build and orphan removal
-# Ensures no stale configuration persists between sessions
-docker compose up -d --build --remove-orphans
-
-2. Observability & Runtime Audit
-
-# Real-time health and resource audit
-# Essential for monitoring resource contention on the 6-monitor array
-docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}"
-
-3. Infrastructure Maintenance
-
-# Pruning unused resources to maintain SN740 2TB SSD efficiency
-docker system prune -f --volumes
-
 ## ⚡ Performance Tuning for ROG Flow Z13
 
 Given the **i9-13900H**'s hybrid core architecture, I apply resource constraints to prevent container sprawl from impacting host performance:
@@ -62,4 +42,3 @@ services:
         limits:
           cpus: '4.0'
           memory: 2G
-
