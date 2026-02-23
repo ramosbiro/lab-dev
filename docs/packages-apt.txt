@@ -1,61 +1,66 @@
-base-files
+# =============================================================================
+# 📦 MANUALLY INSTALLED SYSTEM PACKAGES (APT)
+# Infrastructure: Immutable Lab / WSL2 (Ubuntu 24.04 LTS)
+# Updated: 2026-02-23
+# Environment: ASUS ROG Flow Z13 (i9-13900H | 2TB NVMe)
+# =============================================================================
+
+# --- Core Shell & Productivity ---
 bash
+zsh
+tmux
 bat
-bsdutils
-coreutils
-curl
-dash
-debianutils
-ansible
-apt-transport-https
-base-files
-bash
-bat
-bsdutils
-build-essential
-ca-certificates
-cmake
-coreutils
-curl
-dash
-debianutils
-default-jdk
-diffutils
-findutils
 fzf
-git
-gnupg
-golang-go
-google-cloud-cli
+ripgrep
+jq
+htop
+neofetch
+tree
+unzip
+curl
 grep
 gzip
 hostname
-htop
-init
-jq
-kubectl
-libattr1
+
+# --- Development Runtimes & Compilers ---
+build-essential
+cmake
+pkg-config
+nodejs
+npm
+golang-go
+default-jdk
+python3-pip
+python3-venv
+pipx
 libffi-dev
 libssl-dev
+zlib1g-dev
+
+# --- DevOps & Infrastructure Tooling ---
+ansible
+terraform
+kubectl
+google-cloud-cli
+ca-certificates
+apt-transport-https
+gnupg
+software-properties-common
+
+# --- System Core & WSL Specific ---
+ubuntu-minimal
+ubuntu-wsl
+base-files
+bsdutils
+coreutils
+dash
+debianutils
+diffutils
+findutils
+init
 login
 lsb-release
 ncurses-base
 ncurses-bin
-neofetch
-nodejs
-npm
-pipx
-pkg-config
-python3-pip
-python3-venv
-ripgrep
-software-properties-common
-terraform
-tmux
-tree
-ubuntu-minimal
-ubuntu-wsl
-unzip
+libattr1
 util-linux
-zlib1g-dev
-zsh
