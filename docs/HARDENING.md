@@ -1,37 +1,37 @@
-# 🛡️ System Hardening & Defensive Security
+# 🛡️ Defensive Security & System Hardening
 
-This document outlines the security protocols and hardening strategies implemented in this laboratory. Drawing from 20+ years of IT experience and mission-critical environments, these measures ensure a resilient development ecosystem.
+This document details the defensive architecture and hardening protocols implemented across this infrastructure. Drawing from **20+ years of IT expertise** and extensive experience in **mission-critical environments** within the **São Paulo State Military Police (PMESP)**, these measures ensure a resilient, secure, and high-performance development ecosystem.
 
 ## 1. Operating System Hardening (NixOS & WSL2)
 
-As a **Linux Specialist**, I apply a declarative security model to mitigate OS-level vulnerabilities:
+As a **Linux Specialist**, I implement a declarative security model to mitigate OS-level vulnerabilities at the kernel and userland levels:
 
-* **Minimal Surface Area:** Utilizing NixOS to ensure only strictly necessary services are active, reducing the attack surface by design.
-* **Immutable Generations:** Leveraging the immutable nature of the Nix store to prevent unauthorized persistent changes to system binaries.
-* **Kernel Tuning:** Applying specific `sysctl` parameters to harden the network stack and memory management within the WSL2 environment.
+* **Minimal Surface Area**: Leveraging **NixOS** to enforce a "minimal by design" policy, ensuring only strictly required services and binaries are present in the system path.
+* **Immutable Core**: Utilizing the **Nix Store's immutability** to prevent unauthorized or accidental persistent changes to system-wide configurations and binaries.
+* **Kernel Hardening**: Applying optimized `sysctl` parameters to strengthen the network stack and manage resource allocation (CPU/RAM) within the **WSL2** subsystem to prevent DoS-like conditions.
 
-## 2. Container Security (Docker/Compose)
+## 2. Container & Service Security (Docker)
 
-Security is integrated into the orchestration layer for all **Full Stack (Laravel/Vue.js)** projects:
+Security is baked into the orchestration of all **Full Stack (Laravel/VILT)** projects:
 
-* **Least Privilege Principle:** Containers are configured to run as non-root users whenever possible to prevent container breakout attacks.
-* **Image Auditing:** Continuous scanning of base images for known CVEs before deployment in the local development cycle.
-* **Network Isolation:** Utilizing dedicated Docker bridges to isolate the application, database, and caching layers, preventing lateral movement.
+* **Non-Root Execution**: Strictly enforcing the **Least Privilege Principle** by configuring containers to run as non-root users, mitigating potential container breakout risks.
+* **Network Segmentation**: Utilizing dedicated, isolated Docker bridge networks to decouple the application, database, and caching tiers, preventing lateral movement within the environment.
+* **Supply Chain Security**: Continuous scanning of base images for known **CVEs** and utilizing signed/verified images for development and staging.
 
 ## 3. Network Defense & Infrastructure
 
-Given the **700 Mb/s symmetric fiber** throughput, robust network control is mandatory:
+Given the **700 Mb/s symmetric fiber** throughput, robust traffic control is implemented to maintain integrity:
 
-* **Firewall Orchestration:** Strict inbound/outbound rules to control traffic between the Windows host, WSL2 distros, and the external network.
-* **Secure Tunneling:** Use of encrypted VPNs and SSH keys (Ed25519) with passphrase protection for all remote infrastructure management.
-* **Audit Logging:** Real-time monitoring of authentication logs and unauthorized access attempts across the 6-screen array.
+* **Traffic Orchestration**: Implementation of strict firewall rulesets (Host-level and WSL2-level) to audit and control all inbound and outbound communication.
+* **Secure Remote Access**: Mandatory use of **Ed25519 SSH keys** with strong passphrases and encrypted VPN tunnels for all infrastructure management.
+* **Real-time Observability**: Monitoring of authentication logs and unauthorized access attempts across the **6-screen observability array**.
 
 ## 4. Hardware-Level Security (ROG Flow Z13)
 
-* **Biometric Integration:** Utilizing Windows Hello (Infrared Camera) on the **ROG Flow Z13** for secure, multi-factor authentication.
-* **Encrypted Storage:** Full-disk encryption (BitLocker) for the primary **2TB WD SN740 NVMe** to protect sensitive data and source code.
+* **Multi-Factor Authentication (MFA)**: Utilizing the integrated **Infrared (IR) Camera** and Windows Hello for biometric-secured access to the workstation.
+* **Data-at-Rest Encryption**: Implementation of **AES-256 BitLocker** encryption on the primary **2TB WD SN740 NVMe** to protect proprietary source code and sensitive project assets.
 
-## 5. Defensive Workflow
+## 5. Defensive DevOps Workflow
 
-* **GitHub Actions CI:** Automated linting and security checks for configuration files (Dotfiles and Nix Flakes) to prevent the introduction of insecure defaults.
-* **Secret Management:** Strict use of `.env` files and secret managers; no credentials or API keys are ever committed to the repository.
+* **Automated Auditing**: Integration of **GitHub Actions** for static analysis (linting) and security audits of **Nix Flakes** and **Dotfiles**.
+* **Zero-Trust Secret Management**: Strict enforcement of `.env` patterns; sensitive credentials and API keys are never committed to version control, managed instead via secure environment injection.
