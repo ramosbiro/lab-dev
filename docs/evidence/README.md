@@ -10,7 +10,7 @@ This gallery provides visual confirmation of the laboratory's operational status
 * **Resource Management**: Evidence of the 14-core architecture handling intensive development workloads.
 
 <div align="center">
-  <img src="neofetch_output.png" alt="System Audit" width="90%" />
+  <img src="../../neofetch_output.png" alt="System Audit" width="90%" />
 </div>
 
 ---
@@ -21,9 +21,9 @@ This gallery provides visual confirmation of the laboratory's operational status
 * **Efficiency Audit**: Real-time resource consumption stats showing optimized memory footprints.
 
 <div align="center">
-  <img src="docker_stats1.png" alt="Docker Stats" width="90%" />
-  <img src="docker_stats2.png" alt="Docker Stats" width="90%" />
-  <img src="docker_stats3.png" alt="Docker Stats" width="90%" />
+  <img src="../../docker_stats1.png" alt="Docker Stats" width="90%" />
+  <img src="../../docker_stats2.png" alt="Docker Stats" width="90%" />
+  <img src="../../docker_stats3.png" alt="Docker Stats" width="90%" />
 </div>
 
 ---
@@ -37,4 +37,5 @@ This gallery provides visual confirmation of the laboratory's operational status
   <img src="../../11.jpeg" alt="Setup Wide View" width="45%" />
   <img src="../../22.jpeg" alt="Setup Detail" width="45%" />
 </div>
+
 
