@@ -20,7 +20,7 @@ networkingMode=mirrored
 dnsTunneling=true
 firewall=true
 autoProxy=true
-
+```
 ---
 
 ## 🚀 Kernel & System Tuning
@@ -52,3 +52,4 @@ Integration with the **6-monitor array** is handled via specialized terminal mul
 ## 🛡️ Resilience & Disaster Recovery
 * **Snapshot Strategy:** Periodic exports of the WSL2 distribution (.tar) to cold storage for instant recovery.
 * **NixOS Integration:** Declarative package management ensures that the userland environment is 100% reproducible and can be rebuilt in minutes.
+
