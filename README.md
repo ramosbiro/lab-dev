@@ -10,101 +10,28 @@
 * **Operating Systems:** Linux Specialist (Bazzite, NixOS, Arch, RHEL, Debian).
 * **Core Focus:** Senior Full Stack Development & Infrastructure Engineering.
 
-## Laboratório de Infraestrutura Imutável
+## 🚀 Technical Implementation & Advanced Architecture
 
-![NixOS](https://img.shields.io/badge/NixOS-5277C3?logo=nixos&logoColor=white)
-![Dotfiles](https://img.shields.io/badge/Dotfiles-111111?logo=gnubash&logoColor=white)
-![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
+This laboratory is the realization of an **Infrastructure as Code (IaC)** ecosystem, engineered to support complex software lifecycles with maximum reliability and security.
 
-Este repositório documenta um ambiente de desenvolvimento imutável,
-reproduzível e seguro, baseado em Windows 11 Pro (WSL2 com Ubuntu/Debian)
-e foco em containers (Docker/Compose). O objetivo é demonstrar automação do
-sistema, hardening e um fluxo de trabalho profissional.
+### 1. Immutable Core & Determinism (NixOS & Flakes)
+Unlike mutable installations that degrade over time, this setup leverages **Nix Flakes** to ensure the environment remains identical across any hardware.
+* **Declarative Management:** The entire system state—packages, network configurations, and services—is defined in version-controlled `.nix` files.
+* **Atomic Rollbacks:** Zero-downtime guarantee on configuration failures; the architecture allows instant reversion to previous stable generations.
+* **Dependency Isolation:** Utilization of `nix-shell` to maintain project-specific libraries (e.g., PHP/Laravel stack) isolated from the global system.
 
-## Objetivos
+### 2. Orchestration & Virtualization (WSL2 + Docker)
+Optimization of the virtualization layer for high-performance Full Stack development:
+* **Network Bridging & I/O:** Fine-tuning of the WSL2 network subsystem for low-latency local services and optimized filesystem access via `/mnt/wsl`.
+* **Containerization (VILT Stack):** Orchestration via Docker Compose to isolate execution environments (PHP 8.x, Redis, MySQL/MariaDB), ensuring the application is "Cloud Ready" from the first commit.
 
-- Tornar o setup totalmente reprodutível
-- Versionar configurações críticas do ambiente
-- Garantir segurança por padrão
-- Documentar decisões e arquitetura
+### 3. Defense in Depth & Hardening
+As a SysAdmin and security-focused professional, defense is integrated into the environment's design:
+* **Least Privilege Principle:** Implementation of execution policies that restrict root access both on the host and within containers.
+* **Change Auditing:** Integration with **GitHub Actions** to validate the integrity of configuration files and documentation upon every change.
+* **Network Hardening:** Firewall configuration and traffic control to mitigate vulnerabilities during pre-production stages.
 
-## Diagrama de Arquitetura
-
-```mermaid
-flowchart LR
-  Dev[Desenvolvedor] -->|edita| Dotfiles[(Dotfiles)]
-  Dev -->|altera| Nix[(NixOS/Flakes)]
-  Dotfiles --> Shell[Shell/Editor/CLI]
-  Nix --> System[SO Imutável]
-  System --> Security[Hardening]
-  System --> Repro[Reprodutibilidade]
-  Shell --> Productivity[Produtividade]
-```
-
-## Estrutura do Repositório
-
-- `docs/` documentação e diagramas
-- `dotfiles/` configurações do usuário (shell, editor, tools)
-- `nixos/` módulos e flakes do NixOS
-- `.github/workflows/` automações de CI
-- `scripts/` scripts utilitários
-- `docker-compose.yml` compose base para serviços
-
-## Instalação (Visão Geral)
-
-1. Copie ou sincronize as configurações desejadas.
-2. Aplique os dotfiles no seu home.
-3. Para NixOS, aplique o flake/módulos conforme sua máquina.
-
-Detalhes completos em `docs/INSTALLATION.md` e `docs/WSL2-SETUP.md`.
-
-## Uso
-
-- Ajuste variáveis específicas da sua máquina (host, usuário, paths).
-- Mantenha alterações pequenas e rastreáveis.
-- Use commits convencionais.
-
-## Hardening (Resumo)
-
-- Privilégio mínimo
-- Firewall e serviços essenciais
-- Atualizações controladas
-- Auditoria de mudanças
-
-## Reprodutibilidade
-
-- Configuração declarativa
-- Versionamento de dependências
-- Ambiente determinístico
-
-## CI
-
-O pipeline valida Markdown para garantir documentação consistente a cada
-commit.
-
-## Conventional Commits
-
-Exemplos:
-
-- `feat: adicionar configuração do shell`
-- `docs: documentar hardening de rede`
-- `chore: organizar estrutura do repo`
-
-## Próximos Passos
-
-- Adicionar módulos específicos por host
-- Incluir scripts de bootstrap
-- Documentar restore completo do ambiente
-
-## Documentação Principal
-
-- `docs/WSL2-SETUP.md`
-- `docs/CONTAINERS.md`
-- `docs/DOCKER.md`
-- `docs/STACK.md`
-- `docs/HARDWARE.md`
-- `docs/architecture.md`
-- `docs/PACKAGES.md`
-- `docs/SETUP-RAPIDO.md`
-
-
+### 4. Performance Engineering (ASUS ROG Flow Z13)
+Synergy between high-end hardware and software for extreme multitasking:
+* **High-Density Observability:** Setup optimized for simultaneous visualization across 6 screens, allowing real-time monitoring of kernel metrics, transaction logs, and productivity dashboards.
+* **Memory Management:** Dynamic resource limitation of `vmmem` to prevent memory contention during intensive use of IDEs and multiple Docker instances.
