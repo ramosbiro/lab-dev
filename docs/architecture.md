@@ -59,16 +59,14 @@ graph TD
     style Runtime fill:#bbf,stroke:#333,stroke-width:2px
     style Output fill:#dfd,stroke:#333,stroke-width:2px
 ```
+
 ---
 
 ## 🛡️ Security & Resilience by Design
 Following the Zero-Trust model, the architecture ensures that every component is ephemeral and replaceable.
 
-Storage Encryption: Hardware-backed AES-256 on the 2TB WD SN740 NVMe.
-
-Atomic Updates: NixOS generations allow for instant rollbacks if a system update fails.🛡️ Security & Resilience by Design
-Following the Zero-Trust model, the architecture ensures that every component is ephemeral and replaceable.
-
-Storage Encryption: Hardware-backed AES-256 on the 2TB WD SN740 NVMe.
+Storage Encryption: Hardware-backed AES-256 on the 2TB WD PC SN740 NVMe.
 
 Atomic Updates: NixOS generations allow for instant rollbacks if a system update fails.
+
+Institutional Standards: Implementation of security protocols based on PMESP infrastructure requirements.
