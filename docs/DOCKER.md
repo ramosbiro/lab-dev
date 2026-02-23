@@ -42,7 +42,7 @@ services:
         limits:
           cpus: '4.0'
           memory: 2G
-
+```
 # Clean start with force-build and orphan removal
 # Ensures no stale configuration persists between sessions
 docker compose up -d --build --remove-orphans
@@ -53,3 +53,4 @@ docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}"
 
 # Pruning unused resources to maintain SN740 2TB SSD efficiency
 docker system prune -f --volumes
+
